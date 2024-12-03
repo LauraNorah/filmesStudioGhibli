@@ -7,12 +7,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ContatoForm {
+public class ContatoForm extends JDialog{
     private JTextField nomeField;
     private JTextField emailField;
     private JTextField telefoneField;
-    private JTextButton salvarButton;
-    private JTextButton cancelarButton;
+    private JButton salvarButton;
+    private JButton cancelarButton;
 
     private Contato contato;
     private boolean isEditMode;
@@ -88,7 +88,7 @@ public class ContatoForm {
             emailField.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(
                 this,
-                "Nome e Email são obrigatórios."
+                "Nome e Email são obrigatórios.",
                 "Erro", JOptionPane.ERROR_MESSAGE);
             return false;
         }

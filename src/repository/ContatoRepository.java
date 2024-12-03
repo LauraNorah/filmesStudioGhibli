@@ -47,7 +47,7 @@ public class ContatoRepository {
                         rs.getInt("id"),
                         rs.getString("nome"),
                         rs.getString("email"),
-                        rs.getString("telefone"),
+                        rs.getString("telefone")
                     );
                     contatos.add(contato);
                 }
@@ -76,7 +76,7 @@ public class ContatoRepository {
                         rs.getInt("id"),
                         rs.getString("nome"),
                         rs.getString("email"),
-                        rs.getString("telefone"),
+                        rs.getString("telefone")
                     );
                 }
 
