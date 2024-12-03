@@ -86,7 +86,7 @@ public class ContatoController {
             Contato contato = repository.obterContatoPorId(selectedId);
     
             if (contato != null) {
-                ContatoForm form = new ContatoForm(tableView,"Editar Contato"/*, contato*/);
+                ContatoForm form = new ContatoForm(tableView,"Editar Contato", contato);
                 form.setVisible(true);
                 Contato contatoAtualizado = form.getContato();
     

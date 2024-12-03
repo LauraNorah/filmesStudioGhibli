@@ -12,7 +12,7 @@ public class ContatoRepository {
 
 // criar um novo contato
     public void adicionarContato(Contato contato) {
-        String sql = "INSERT INTO contatos (nome, email, telefone,) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO contatos (nome, email, telefone) VALUES (?, ?, ?)";
 
         try (Connection conn = DbConnection.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)) {
