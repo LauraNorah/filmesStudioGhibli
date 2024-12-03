@@ -14,7 +14,7 @@ public class ContatoController {
     private ContatoRepository repository;
     private ContatoTableView tableView;
 
-    public Contato Controller() {
+    public ContatoController() {
         repository = new ContatoRepository();
         tableView = new ContatoTableView();
         inicializar();
@@ -80,13 +80,13 @@ public class ContatoController {
     
 
     private void editarContato() {
-        int selectedId = tableView.getSelectedContatold();
+        int selectedId = tableView.getSelectedContatoId();
             
         if (selectedId != -1) {
-            Contato contato = repository.obterContatoPorld(selectedId);
+            Contato contato = repository.obterContatoPorId(selectedId);
     
             if (contato != null) {
-                ContatoForm form = new ContatoForm(tableView, "Editar Contato", contato);
+                ContatoForm form = new ContatoForm(tableView,"Editar Contato"/*, contato*/);
                 form.setVisible(true);
                 Contato contatoAtualizado = form.getContato();
     
