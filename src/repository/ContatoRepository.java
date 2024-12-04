@@ -1,6 +1,6 @@
 package repository;
 
-import config.DbConnection;
+import config.DbConnectionContato;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class ContatoRepository {
     public void adicionarContato(Contato contato) {
         String sql = "INSERT INTO contatos (nome, email, telefone) VALUES (?, ?, ?)";
 
-        try (Connection conn = DbConnection.getConnection();
+        try (Connection conn = DbConnectionContato.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)) {
 
                 stmt.setString(1, contato.getNome());
@@ -38,7 +38,7 @@ public class ContatoRepository {
         List<Contato> contatos = new ArrayList<>();
         String sql = "SELECT * FROM contatos";
 
-        try (Connection conn = DbConnection.getConnection();
+        try (Connection conn = DbConnectionContato.getConnection();
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql)) {
 
@@ -65,7 +65,7 @@ public class ContatoRepository {
         String sql = "SELECT * FROM contatos WHERE id = ?";
         Contato contato = null;
 
-        try (Connection conn = DbConnection.getConnection();
+        try (Connection conn = DbConnectionContato.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)) {
 
                 stmt.setInt(1, id);
@@ -92,7 +92,7 @@ public class ContatoRepository {
     public void atualizarContato(Contato contato) {
         String sql = "UPDATE contatos SET nome = ?, email = ?, telefone = ? WHERE id = ?";
 
-        try (Connection conn = DbConnection.getConnection();
+        try (Connection conn = DbConnectionContato.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)) {
 
                 stmt.setString(1, contato.getNome());
@@ -118,7 +118,7 @@ public class ContatoRepository {
     public void deletarContato(int Id) {
         String sql = "DELETE FROM contatos WHERE id = ?";
 
-        try (Connection conn = DbConnection.getConnection();
+        try (Connection conn = DbConnectionContato.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)) {
 
                 stmt.setInt(1, Id );

@@ -37,4 +37,5 @@ public class Categoria {
         return "Filmes [catId=" + catId + ", catTipo=" + catTipo + "]";
     }
     
+    //ALTER TABLE "filmes" ADD CONSTRAINT "fk_filmes_categorias" FOREIGN KEY ( "catId" ) REFERENCES "categoria" ( " catId " );
 }

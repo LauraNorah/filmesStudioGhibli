@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DbConnection {
-    private static final String URL = "jdbc:mysql://localhost:3306/cad_contatos?useSSL=false&serverTimezone=UTC";
+public class DbConnectionFilmes {
+    private static final String URL = "jdbc:mysql://localhost:3306/filmesStudioGhibli?useSSL=false&serverTimezone=UTC";
     private static final String USER = "root";
     private static final String PASSWORD = "";
 
@@ -34,4 +34,3 @@ public class DbConnection {
         }
     }
 }
-

@@ -25,7 +25,7 @@ public class Contato {
 
     // Getters e Setters
     public int getId() {
-        return id; 
+        return id;
     } // ID somente leitura, sem setter.
 
     // nome
