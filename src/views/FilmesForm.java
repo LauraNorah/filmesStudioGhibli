@@ -77,7 +77,7 @@ public class FilmesForm extends JDialog{
             }
         });
 
-        cancelarButton.addActionListener(_-> dispose());
+        cancelarButton.addActionListener(e -> dispose());
 
         this.add(panel);
         this.pack();
@@ -90,10 +90,10 @@ public class FilmesForm extends JDialog{
         if (filmes != null) {
             filmeTituloField.setText(filmes.getFilmeTitulo());
             filmeDescField.setText(filmes.getFilmeDesc());
-            filmeDuracaoField.setText(toString(filmes.getFilmeDuracao()));
-            filmeAnoField.setText(toString(filmes.getFilmeAno()));
-            filmeClasField.setText(toString(filmes.getFilmeClas()));
-            catIdField.setText(toString(filmes.getCatId()));
+            filmeDuracaoField.setText(String.valueOf(filmes.getFilmeDuracao()));
+            filmeAnoField.setText(String.valueOf(filmes.getFilmeAno()));
+            filmeClasField.setText(String.valueOf(filmes.getFilmeClas()));
+            catIdField.setText(String.valueOf(filmes.getCatId()));
         }
     }
 
@@ -114,10 +114,10 @@ public class FilmesForm extends JDialog{
         filmes = new Filmes(
             filmeTituloField.getText().trim(),
             filmeDescField.getText().trim(),
-            filmeDuracaoField.getText().trim(),
-            filmeAnoField.getText().trim(),
-            filmeClasField.getText().trim(),
-            catIdField.getText().trim()
+            Integer.parseInt(filmeDuracaoField.getText().trim()),
+            Integer.parseInt(filmeAnoField.getText().trim()),
+            Integer.parseInt(filmeClasField.getText().trim()),
+            Integer.parseInt(catIdField.getText().trim())
         );
     }
 
@@ -126,10 +126,10 @@ public class FilmesForm extends JDialog{
         if (filmes != null) {
             filmes.setFilmeTitulo(filmeTituloField.getText().trim());
             filmes.setFilmeDesc(filmeDescField.getText().trim());
-            filmes.setFilmeDuracao(filmeDuracaoField.getText().trim());
-            filmes.setFilmeAno(filmeAnoField.getText().trim());
-            filmes.setFilmeClas(filmeClasField.getText().trim());
-            filmes.setCatId(catId.getText().trim());
+            filmes.setFilmeDuracao(Integer.parseInt(filmeDuracaoField.getText().trim()));
+            filmes.setFilmeAno(Integer.parseInt(filmeAnoField.getText().trim()));
+            filmes.setFilmeClas(Integer.parseInt(filmeClasField.getText().trim()));
+            filmes.setCatId(Integer.parseInt(catIdField.getText().trim()));
         }
     }
 

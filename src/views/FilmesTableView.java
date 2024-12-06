@@ -37,13 +37,13 @@ public class FilmesTableView extends JFrame {
         tableModel.setRowCount(0); // limpa a tabela
         for (Filmes filme : filmes) {
             Object[] row = {
-                filmes.getFilmeId(),
-                filmes.getFilmeTitulo(),
-                filmes.getFilmeDesc(),
-                filmes.getFilmeDuracao(),
-                filmes.getFilmeAno(),
-                filmes.getFilmeClas(),
-                filmes.getCatId()
+                filme.getFilmeId(),
+                filme.getFilmeTitulo(),
+                filme.getFilmeDesc(),
+                filme.getFilmeDuracao(),
+                filme.getFilmeAno(),
+                filme.getFilmeClas(),
+                filme.getCatId()
             };
             tableModel.addRow(row);
         }

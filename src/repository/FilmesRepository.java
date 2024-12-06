@@ -133,8 +133,7 @@ public class FilmesRepository {
         try (Connection conn = DbConnectionFilmes.getConnection();
             PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-                int filmeId;
-                stmt.setInt(1, filmeId);
+                stmt.setInt(1, filmesId);
 
                 int linhasAfetadas = stmt.executeUpdate();
                 if (linhasAfetadas > 0) {
