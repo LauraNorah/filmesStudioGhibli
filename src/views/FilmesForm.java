@@ -114,9 +114,9 @@ public class FilmesForm extends JDialog{
         filmes = new Filmes(
             filmeTituloField.getText().trim(),
             filmeDescField.getText().trim(),
-            Integer.parseInt(filmeDuracaoField.getText().trim()),
+            filmeDuracaoField.getText().trim(),
             Integer.parseInt(filmeAnoField.getText().trim()),
-            Integer.parseInt(filmeClasField.getText().trim()),
+            filmeClasField.getText().trim(),
             Integer.parseInt(catIdField.getText().trim())
         );
     }
@@ -126,9 +126,9 @@ public class FilmesForm extends JDialog{
         if (filmes != null) {
             filmes.setFilmeTitulo(filmeTituloField.getText().trim());
             filmes.setFilmeDesc(filmeDescField.getText().trim());
-            filmes.setFilmeDuracao(Integer.parseInt(filmeDuracaoField.getText().trim()));
+            filmes.setFilmeDuracao(filmeDuracaoField.getText().trim());
             filmes.setFilmeAno(Integer.parseInt(filmeAnoField.getText().trim()));
-            filmes.setFilmeClas(Integer.parseInt(filmeClasField.getText().trim()));
+            filmes.setFilmeClas(filmeClasField.getText().trim());
             filmes.setCatId(Integer.parseInt(catIdField.getText().trim()));
         }
     }
@@ -138,4 +138,3 @@ public class FilmesForm extends JDialog{
     }
     
 }
-

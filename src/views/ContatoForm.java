@@ -65,7 +65,7 @@ public class ContatoForm extends JDialog{
             }
         });
 
-        cancelarButton.addActionListener(e -> dispose());
+        //cancelarButton.addActionListener(e -> dispose());
 
         this.add(panel);
         this.pack();

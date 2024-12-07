@@ -16,12 +16,12 @@ create table administradores(
 );
 
 create table filmes(
-	filmeId int(4) not null primary key,
+	filmeId int auto_increment primary key,
 	filmeTitulo varchar(70) not null,
 	filmeDesc text not null,
-	filmeDuracao int not null,
+	filmeDuracao text not null,
 	filmeAno int(4) not null,
-	filmeClas int(2) not null,
+	filmeClas text not null,
 	catId int(4) not null
 );
 
@@ -30,7 +30,7 @@ create table categoria(
 	catTipo varchar(30) not null
 );
 
-alter table filmes add foreign key (catId) references categoria(catID);
+alter table filmes add foreign key (catId) references categoria(catId);
 
 -------------------------------------------------------------
 

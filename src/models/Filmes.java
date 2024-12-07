@@ -4,16 +4,16 @@ public class Filmes {
     private int filmeId;
     private String filmeTitulo;
     private String filmeDesc;
-    private int filmeDuracao;
+    private String filmeDuracao;
     private int filmeAno;
-    private int filmeClas;
+    private String filmeClas;
     private int catId;
 
     // Construtores
     public Filmes() {
     }
     
-    public Filmes(String filmeTitulo, String filmeDesc, int filmeDuracao, int filmeAno, int filmeClas, int catId) {
+    public Filmes(String filmeTitulo, String filmeDesc, String filmeDuracao, int filmeAno, String filmeClas, int catId) {
         this.filmeTitulo = filmeTitulo;
         this.filmeDesc = filmeDesc;
         this.filmeDuracao = filmeDuracao;
@@ -22,7 +22,7 @@ public class Filmes {
         this.catId = catId;
     }
     
-    public Filmes(int filmeId, String filmeTitulo, String filmeDesc, int filmeDuracao, int filmeAno, int filmeClas, int catId) {
+    public Filmes(int filmeId, String filmeTitulo, String filmeDesc, String filmeDuracao, int filmeAno, String filmeClas, int catId) {
         this.filmeId = filmeId;
         this.filmeTitulo = filmeTitulo;
         this.filmeDesc = filmeDesc;
@@ -56,10 +56,10 @@ public class Filmes {
     
     
     // Duração
-    public int getFilmeDuracao() {
+    public String getFilmeDuracao() {
         return filmeDuracao;
     }
-    public void setFilmeDuracao(int filmeDuracao) {
+    public void setFilmeDuracao(String filmeDuracao) {
         this.filmeDuracao = filmeDuracao;
     }
     
@@ -74,10 +74,10 @@ public class Filmes {
     
     
     // Clas (classificação)
-    public int getFilmeClas() {
+    public String getFilmeClas() {
         return filmeClas;
     }
-    public void setFilmeClas(int filmeClas) {
+    public void setFilmeClas(String filmeClas) {
         this.filmeClas = filmeClas;
     }
     
